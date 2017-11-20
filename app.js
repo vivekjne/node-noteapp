@@ -9,7 +9,7 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 var mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/notes')
+mongoose.connect('mongodb://oneiro:oneiro123@ds113636.mlab.com:13636/notes')
         .then(()=>console.log('Connection successful'))
         .catch((err)=>console.log(err))
         

@@ -24,9 +24,9 @@ router.post('/add',function(req,res,next){
     if(err){
       console.log(err);
     }
-  
+    res.redirect('/')
   })
-  res.redirect('/')
+
 })
 
 router.get('/notes/:id',function(req,res,next){

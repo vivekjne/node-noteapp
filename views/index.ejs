@@ -1,0 +1,25 @@
+<% include partials/header %>
+<div class="pull-right" style="margin-right: 10%">
+	<a href="/add" class="btn btn-primary btn-lg" id="add">+ Add Note</a>
+</div>
+<div>
+	<h1 style="text-align: center;">Note Taking App using pure Javascript</h1>
+</div>
+
+<div style="margin-top: 5%">
+<div class="container" id="note-container">
+  
+  <% notes.forEach((note)=>{ %>
+    <div class="col-md-4 col-sm-4" style="position: relative;padding:4%" >
+        <a href="/notes/<%= note._id %>"><div style="height:300px;width:100%;background-color:maroon;" class="note">
+        <h3 style="position:absolute;top:50%;left:50%;transform: translate(-50%,-50%);text-align:center;color:white" ><%= note.title %></h3>
+        </div></a>
+        </div>
+  
+ <% })%>
+
+</div>
+</div>
+ 
+
+<% include partials/footer %>

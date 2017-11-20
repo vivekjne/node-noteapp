@@ -1,0 +1,26 @@
+<% include partials/header %>
+<div class="container">
+
+<div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" name="title" class="form-control" readonly value="<%= note.title %>">
+</div>
+<div class="form-group">
+    <label for="title">Note</label>
+    <textarea rows=10 name="note" class="form-control" readonly ><%= note.note %></textarea>
+</div>
+<div class="row">
+    <div class="col-md-6 col-sm-6">
+        <a href="/notes/edit/<%= note.id %>" class="btn btn-primary btn-block">Edit</a>
+        
+        
+    </div>
+    <div class="col-md-6 col-sm-6">
+           <a href="/notes/delete/<%= note._id %>" class=" btn btn-danger btn-block">Delete</a>
+            
+            
+        </div>
+</div>
+
+</div>
+<% include partials/footer %>
